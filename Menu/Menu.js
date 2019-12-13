@@ -14,21 +14,23 @@ let menuItems = [
   // Step 1: Write a function that will create a menu component as seen below:
 
 
-  function menuf(){
-  <div class="menu">
-    <ul>
-      {each menu item as a list item}
-    </ul>
-  </div>
-  }
+  // function menuf(){
+  // <div class="menu">
+  //   <ul>
+  //     {each menu item as a list item}
+  //   </ul>
+  // </div>
+  // }
 
 
-  function menuf(){
+  function menuf([]){
     const divm = document.createElement('div')
     const ulm = document.createElement('ul')
-document.textContent("")
+document.textContent("menuItems")
   
     }
+
+
 
   // The function takes an array as its only argument.
 
