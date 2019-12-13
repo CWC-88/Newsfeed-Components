@@ -37,8 +37,12 @@ array.forEach(element => {
   document.createElement('li', 'Log Out')
 
 });
-  
-document.querySelector("'menu-button")
+
+const button = "menu-button"
+document.querySelector("menu-button")
+button.addEventListener('click', ("menu","'menu--open'"));
+
+
     }
 
 
