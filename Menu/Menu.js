@@ -27,7 +27,18 @@ let menuItems = [
     const divm = document.createElement('div')
     const ulm = document.createElement('ul')
 document.textContent("menuItems")
+
+array.forEach(element => {
+  document.createElement('li', 'Students')
+  document.createElement('li', 'Faculty')
+  document.createElement('li', "What's New")
+  document.createElement('li', 'Tech Trends')
+  document.createElement('li', 'Music')
+  document.createElement('li', 'Log Out')
+
+});
   
+document.querySelector("'menu-button")
     }
 
 
