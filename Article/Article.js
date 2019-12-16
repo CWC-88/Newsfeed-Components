@@ -89,51 +89,69 @@ const data = [
 ];
 
 // Step 1: Create a function that creates a component. You will want your component to look like the template below: 
-  
+
+// <div class="article">
+//  <h2>{title of the article}</h2>
+//  <p class="date">{date of the article}</p>
+//  {three separate paragraph elements}
+//  <span class='expandButton'></span>
+// </div> */}
+
+
+function newcom(t,d,pa,pb,pc) {
+const art= document.createElement('div')
+const hetwo = document.createElement('h2')
+const date= document.createElement('p')
+const p1=document.createElement('p')
+const p2=document.createElement('p')
+const p3=document.createElement('p')
+const spann=document.createElement('span')
+
+
+art.appendChild(hetwo)
+art.appendChild(date)
+art.appendChild(p1)
+art.appendChild(p2)
+art.appendChild(p3)
+art.appendChild(spann)
 
 
 
 
-  function newcom(div,h2,p)
-  {
-    const divv = document.createElement('div');
-    divv.setAttribute('article');
-    document.body.appendChild(hcom);
-    document.body.appendChild(pe);
-    document.body.appendChild(spam);
- 
-    const hcom = document.createElement('h2');
-   hcom.textContent='Lambda School Students: "We\'re the best!"';
-   
-  
-    const pe = document.createElement('p');
-    pe.setAttribute('date');
-    pe.textContent = "Nov 5th, 2018";
-    document.body.appendChild(firstParagraph);
-    document.body.appendChild(secondParagraph);
-    document.body.appendChild(thirdParagraph);
-  
-    const spam = document.createElement('span')
-    spam.setAttribute('expandButton');
-    
-    expandButton.addEventListener('toggle', ("article",".article-open"));
-
-    return newcom
-  }
- 
+art.classList.add('article')
+date.classList.add('date')
+spann.classList.add('expandButton')
 
 
+hetwo.textContent = t
+date.textContent = d
+p1.textContent = pa
+p2.textContent = pb
+p3.textContent = pc
+spann.textContent = 'click to expand'
+spann.addEventListener('click', (event)=>{
+art.classList.toggle('article-open')
 
-function md([data]){
-data.map([data]);
-  document.body.appendChild(".article","title");
-  document.body.appendChild(".article","date");
-  document.body.appendChild(".article","firstParagraph");
-  document.body.appendChild(".article","secondParagraph");
-  document.body.appendChild(".article","thirdParagraph");
-  
+})
+
+return art
+
 }
 
+const article = document.querySelector('.articles')
+
+data.forEach(x => {
+article.appendChild(newcom(
+  x.date,
+  x.title,
+  x.firstParagraph,
+  x.secondParagraph,
+  x.thirdParagraph
+))
+
+}
+
+)
 
 
   // Hint: You will need to use createElement more than once here!

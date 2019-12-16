@@ -22,29 +22,33 @@ let menuItems = [
   // </div>
   // }
 
+  const asdfasf = document.querySelector('.menu-button')
+  console.log(asdfasf)
 
-  function menuf([]){
-    const divm = document.createElement('div')
-    const ulm = document.createElement('ul')
-document.textContent("menuItems")
+function ddd(arr){
+const menuuu = document.createElement('div')
+const ul1 = document.createElement('ul')
 
-array.forEach(element => {
-  document.createElement('li', 'Students')
-  document.createElement('li', 'Faculty')
-  document.createElement('li', "What's New")
-  document.createElement('li', 'Tech Trends')
-  document.createElement('li', 'Music')
-  document.createElement('li', 'Log Out')
+ul1.appendChild(menuuu)
 
-});
-
-const button = "menu-button"
-document.querySelector("menu-button")
-button.addEventListener('click', ("menu","'menu--open'"));
+menuuu.classList.add('.menu')
 
 
-    }
 
+  arr.forEach(x => {
+    const items = document.createElement('li')
+    items.textContent=x
+    items.appendChild(ul1)
+    asdfasf.addEventListener('click', (event)=>{
+      menuuu.classList.toggle('menu--open')
+      
+      })
+  })
+
+return menuuu
+}
+
+asdfasf.appendChild(ddd(menuItems));
 
 
   // The function takes an array as its only argument.
